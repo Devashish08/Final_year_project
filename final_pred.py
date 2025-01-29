@@ -143,7 +143,7 @@ class Application:
                     x, y, w, h=map['bbox']
                     image = cv2image_copy[y - offset:y + h + offset, x - offset:x + w + offset]
 
-                    white = cv2.imread("white.jpg")
+                    white = cv2.imread("white.jpg")  # Use an image in the current directory or generate one
                     # img_final=img_final1=img_final2=0
                     if image.all:
                         handz = hd2.findHands(image, draw=False, flipType=True)
